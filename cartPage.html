@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <title>Cart Page</title>
+</head>
+
+<body>
+  <main>
+    <header>
+      <nav class="navBar">
+        <a href="./index.html" style="color: white; text-decoration: none;"><h2 id="homePage">Tech-Shop</h2></a>
+        <form action="">
+          <input type="search" name="search" placeholder="Search For Product" class="searchBar">
+        </form>
+        <i class="fa-solid fa-magnifying-glass searchIcon"></i>
+        <a><i class="fa-solid fa-cart-shopping cartIcon"></i><span id="countOfProducts">0</span></a>
+        <i class="fa-solid fa-user userAcc_Icon"></i>
+        <section class="userDetails">
+          <ul class="listOfOptions">
+            <li>
+              <h6>Hello!</h6>
+            </li>
+            <li>Access account and manage orders</li>
+            <li class="loginbtn">
+              <h6>Login / Signup</h6>
+            </li>
+            <hr size="4">
+            <li>Orders</li>
+            <li>Wishlists</li>
+            <li>Gift Cards</li>
+            <li>Saved Cards</li>
+            <li>Saved Addresses</li>
+          </ul>
+        </section>
+      </nav>
+    </header>
+    <section class="entireCart">
+      <i class="fa-solid fa-cart-plus"></i>
+      <h3>Your Cart is Empty</h3>
+      <button id="cartShopingbtn"><a href="./index.html" style="color: white; text-decoration: none;">Start Shopping</a></button>
+    </section>
+    <section class="wholeItemsInCart">
+      <section id="list_Data">
+      
+      </section>
+      <section id="summary_Part">
+      
+      </section>
+    </section>
+
+    <footer>
+      <section class="footer_part">
+        <div class="footerData">
+          <h4>Tech-Shop</h4>
+          <p>Subscribe to our Email alerts to recieve early discount offers and new products info.</p>
+          <form action="">
+            <input type="email" name="mail" placeholder="Email Address*" class="footerEmail"><br><br>
+            <input type="submit" name="Subscribe" value="Subscribe" class="subscribeBtn">
+          </form>
+        </div>
+        <div class="footerData">
+          <ul>
+            <li>
+              <h5>Help</h5>
+            </li>
+            <li>FAQs</li>
+            <li>Track Order</li>
+            <li>Cancle Order</li>
+            <li>Return Order</li>
+            <li>Warranty Info</li>
+          </ul>
+        </div>
+        <div class="footerData">
+          <ul>
+            <li>
+              <h5>Policies</h5>
+            </li>
+            <li>Return Policy</li>
+            <li>Security</li>
+            <li>Sitemap</li>
+            <li>Privacy Policy</li>
+            <li>Terms & Conditions</li>
+          </ul>
+        </div>
+        <div class="footerData">
+          <ul>
+            <li>
+              <h5>Company</h5>
+            </li>
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>Service Centers</li>
+            <li>Careers</li>
+            <li>Affiliates</li>
+          </ul>
+        </div>
+      </section>
+      <hr size="4" style="color:#eaeaea">
+      <section>
+        <div class="copy_Right_Year">
+          <div id="current_year"></div>
+          <div id="copy_Rights" style="border:3px solid #afafaf;border-top: none;border-bottom: none;padding: 0px 20px;margin: 0px 20px;"> All Rights Reserved. Built by </div>
+          <div id="name_Developer" style="color: #d3f0ff; cursor: pointer;">AJAY PRAMMASANI</div>
+        </div>
+        <div class="socialMedia_Icons">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-x-twitter"></i>
+          <i class="fa-brands fa-linkedin"></i>
+        </div>
+      </section>
+    </footer>
+  </main>
+  <script src="./cartpageScript.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>

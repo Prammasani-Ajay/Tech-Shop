@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <title>Tech Shop</title>
+</head>
+
+<body>
+  <main>
+    <i class="fa-solid fa-angle-up" id="angletoScrollUp"></i>
+    <header>
+      <nav class="navBar">
+        <h2 id="homePage">Tech-Shop</h2>
+        <form action="" autocomplete="off">
+          <input type="search" name="search" placeholder="Search For Product" class="searchBar">
+        </form>
+        <i class="fa-solid fa-magnifying-glass searchIcon"></i>
+        <a href="./cartPage.html" target="_self" style="color: white; text-decoration: none;"><i class="fa-solid fa-cart-shopping cartIcon"></i><span
+            id="countOfProducts">0</span></a>
+        <i class="fa-solid fa-user userAcc_Icon"></i>
+        <section class="userDetails">
+          <ul class="listOfOptions">
+            <li>
+              <h6>Hello!</h6>
+            </li>
+            <li>Access account and manage orders</li>
+            <li class="loginbtn">
+              <h6>Login / Signup</h6>
+            </li>
+            <hr size="4">
+            <li>Orders</li>
+            <li>Wishlists</li>
+            <li>Gift Cards</li>
+            <li>Saved Cards</li>
+            <li>Saved Addresses</li>
+          </ul>
+        </section>
+      </nav>
+      <section id="searchElements">
+
+      </section>
+
+      <!-- carousels are starts from here  -->
+
+      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <section class="carouselContent">
+              <h4>JBL Live 660NC</h4>
+              <span>Keep The Noise Out, Or In.You Choose.</span>
+              <h4>₹9,999 <strike>₹14,999</strike></h4>
+              <button class="startShopingbtn">Shop Now</button>
+            </section>
+            <img src="./images/products/jbl660nc-1.png" class="d-block carouselsImgs" alt="p1">
+          </div>
+          <div class="carousel-item">
+            <section class="carouselContent">
+              <h4>boAt Airdopes 131</h4>
+              <span>Featherweight For Comfort All-Day.</span>
+              <h4>₹1,099 <strike>₹2,990</strike></h4>
+              <button class="startShopingbtn">Shop Now</button>
+            </section>
+            <img src="./images/products/boat131-3.png" class="d-block carouselsImgs" alt="p1">
+          </div>
+          <div class="carousel-item">
+            <section class="carouselContent">
+              <h4>Sony WF-1000xm4</h4>
+              <span>Give Your Favourite Music A Boost</span>
+              <h4>₹19,990 <strike>₹24,990</strike></h4>
+              <button class="startShopingbtn">Shop Now</button>
+            </section>
+            <img src="./images/products/sony1000xm4-1.png" class="d-block carouselsImgs" alt="p1">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- Sign in form in dialog box -->
+      <dialog class="loginDialog">
+        <div class="Signin_Form">
+          <div class="headerOfDialog">
+            <h4>Login</h4>
+            <i class="fa-solid fa-xmark closebtn1"></i>
+          </div>
+          <p id="checkAccOccuring">Account is not Yet ? <span id="createAcctab">Create an account </span></p>
+          <form action="">
+            <input type="email" name="mail" placeholder="Email" class="FormInputField" required><br><br>
+            <input type="password" name="pswd" placeholder="Password" class="FormInputField" required><br><br>
+            <input type="submit" name="submit" value="Login">
+          </form><br>
+          <hr size="3" style="color: rgb(255, 255, 255);">
+          <span style="font-size: 12px;">Login with</span>​
+          <ul id="socialMedia">
+            <li>Facebook</li>
+            <li>Google</li>
+            <li>Twitter</li>
+          </ul>
+        </div>
+      </dialog>
+      <!-- signup form in dialog box  -->
+      <dialog class="signupDialog">
+        <div class="Signin_Form">
+          <div class="headerOfDialog">
+            <h4>Signup</h4>
+            <i class="fa-solid fa-xmark closebtn2"></i>
+          </div>
+          <p id="checkAccOccuring">Already have an account ? <span id="logintab">Login</span></p>
+          <form action="">
+            <input type="text" name="username" placeholder="User Name" class="FormInputField" required><br><br>
+            <input type="email" name="mail" placeholder="Email" class="FormInputField" required><br><br>
+            <input type="password" name="pswd" placeholder="Password" class="FormInputField" required><br><br>
+            <input type="password" name="pswd" placeholder="Confirm Password" class="FormInputField" required><br><br>
+            <input type="submit" name="submit" value="SignUp">
+          </form><br>
+          <hr size="3" style="color: rgb(255, 255, 255);">
+          <span style="font-size: 12px;">Signup with</span>​
+          <ul id="socialMedia">
+            <li>Facebook</li>
+            <li>Google</li>
+            <li>Twitter</li>
+          </ul>
+        </div>
+      </dialog>
+    </header>
+
+    <!-- second section part starts from here  -->
+
+    <section id="featuredProducts">
+      <h3>Featured Products</h3>
+      <section class="carouselImageSlides">
+
+      </section>
+    </section>
+    <!-- third section starts from here onwards -->
+
+    <section id="productSets">
+      <h3 id="heading_Products">Top Products</h3>
+      <ul class="productSets_titles">
+        <li class="itemsTitleName">All</li>
+        <li class="itemsTitleName">Headphones</li>
+        <li class="itemsTitleName">Earbuds</li>
+        <li class="itemsTitleName">Earphones</li>
+        <li class="itemsTitleName">Neckbands</li>
+      </ul>
+
+      <section id="cardsWithData">
+
+      </section>
+      <!-- products Page from here -->
+      <section id="Products_Page">
+        <section id="filter_Section">
+          <button id="clear_Filter_Btn">Clear Filters</button>
+          <ul>
+            <li>
+              <h5>Sort By</h5>
+            </li>
+            <hr size="3">
+            <li>Latest</li>
+            <li>Featured</li>
+            <li>Top Rated</li>
+            <li id="lowestPrice_List">Price (Lowest First)</li>
+            <li id="highestPrice_List">Price (Highest First)</li>
+          </ul>
+
+          <ul>
+            <li>
+              <h5>Filter By</h5>
+            </li>
+            <hr size="3">
+            <li>
+              <h6>Brands</h6>
+            </li>
+            <li><input type="checkbox" id="brand_JBL" name="JBL" value="JBL"> JBL</li>
+            <li><input type="checkbox" id="brand_boAt" name="BoAt" value="BoAt"> BoAt</li>
+            <li><input type="checkbox" id="brand_Sony" name="Sony" value="Sony"> Sony</li>
+          </ul>
+
+          <ul>
+            <li>
+              <h5>Category</h5>
+            </li>
+            <hr size="3">
+            <li><input type="checkbox" id="filter_Headphones" name="Headphones" value="Headphones"> Headphones</li>
+            <li><input type="checkbox" id="filter_Earbuds" name="Earbuds" value="Earbuds"> Earbuds</li>
+            <li><input type="checkbox" id="filter_Earphones" name="Earphones" value="Earphones"> Earphones</li>
+            <li><input type="checkbox" id="filter_Neckbands" name="Neckbands" value="Neckbands"> Neckbands</li>
+          </ul>
+
+          <ul>
+            <li>
+              <h5>Price</h5>
+            </li>
+            <li><input type="range" id="points" name="points" min="0" max="10"></li>
+          </ul>
+
+        </section>
+        <section id="all_Products">
+
+        </section>
+
+      </section>
+    </section>
+    <!-- individual product details  -->
+
+    <section id="productDetails">
+      <section id="productDetailsHeader">
+        <div class="allImages">
+
+        </div>
+        <div class="displayImage">
+
+        </div>
+        <div class="imageDetails">
+          <div class="headerPartOfDetails">
+
+          </div>
+          <hr style="width: 25rem;color: #d6d6d6;">
+          <div class="pricePartOfDetails">
+
+          </div>
+          <hr style="width: 25rem;color: #d6d6d6;">
+          <div class="offersPartOfDetails">
+            <h5> Offers and Discounts </h5>
+            <div>
+              <span>No cost EMI ON Credit Card</span>
+              <span>Pay Later & Avail Cashback</span>
+            </div>
+          </div>
+          <hr style="width: 25rem;color: #d6d6d6;">
+          <div class="addToCartBtnOfDetails">
+            <button class="btnInDetails">Add to cart</button>
+          </div>
+        </div>
+      </section>
+      <section class="aboutProduct">
+        <ul>
+          <li class="aboutTitles">Specifications</li>
+          <li class="aboutTitles">Overview</li>
+          <li class="aboutTitles">Reviews</li>
+        </ul>
+        <div id="specifications">
+
+        </div>
+      </section>
+
+    </section>
+
+
+    <!-- Advantages Section -->
+    <section id="advantagesSection">
+      <h3>Our Advantages</h3>
+
+      <div id="data_Advantages">
+        <div class="individualDetailsAdvantages">
+          <i class="fa-solid fa-truck-fast"></i>
+          <div>
+            <h5>Express Delivery</h5>
+            <p>Shipping in 24 Hours</p>
+          </div>
+        </div>
+        <div class="individualDetailsAdvantages">
+          <i class="fa-solid fa-shield-halved"></i>
+          <div>
+            <h5>Brand Warranty</h5>
+            <p>100% Original Products</p>
+          </div>
+        </div>
+        <div class="individualDetailsAdvantages">
+          <i class="fa-solid fa-tags"></i>
+          <div>
+            <h5>Exciting Deals</h5>
+            <p>On all prepaid orders</p>
+          </div>
+        </div>
+        <div class="individualDetailsAdvantages">
+          <i class="fa-solid fa-credit-card"></i>
+          <div>
+            <h5>Secure Payments</h5>
+            <p>SSL/Secure certificate</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer Of the page -->
+    <footer>
+      <section class="footer_part">
+        <div class="footerData">
+          <h4>Tech-Shop</h4>
+          <p>Subscribe to our Email alerts to recieve early discount offers and new products info.</p>
+          <form action="">
+            <input type="email" name="mail" placeholder="Email Address*" class="footerEmail"><br><br>
+            <input type="submit" name="Subscribe" value="Subscribe" class="subscribeBtn">
+          </form>
+        </div>
+        <div class="footerData">
+          <ul>
+            <li>
+              <h5>Help</h5>
+            </li>
+            <li>FAQs</li>
+            <li>Track Order</li>
+            <li>Cancle Order</li>
+            <li>Return Order</li>
+            <li>Warranty Info</li>
+          </ul>
+        </div>
+        <div class="footerData">
+          <ul>
+            <li>
+              <h5>Policies</h5>
+            </li>
+            <li>Return Policy</li>
+            <li>Security</li>
+            <li>Sitemap</li>
+            <li>Privacy Policy</li>
+            <li>Terms & Conditions</li>
+          </ul>
+        </div>
+        <div class="footerData">
+          <ul>
+            <li>
+              <h5>Company</h5>
+            </li>
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>Service Centers</li>
+            <li>Careers</li>
+            <li>Affiliates</li>
+          </ul>
+        </div>
+      </section>
+      <hr size="4" style="color:#eaeaea">
+      <section>
+        <div class="copy_Right_Year">
+          <div id="current_year"></div>
+          <div id="copy_Rights" style="border:3px solid #afafaf;border-top: none;border-bottom: none;padding: 0px 20px;margin: 0px 20px;"> All Rights Reserved. Built by </div>
+          <div id="name_Developer" style="color: #d3f0ff; cursor: pointer;">AJAY PRAMMASANI</div>
+        </div>
+        <div class="socialMedia_Icons">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-x-twitter"></i>
+          <i class="fa-brands fa-linkedin"></i>
+        </div>
+      </section>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
