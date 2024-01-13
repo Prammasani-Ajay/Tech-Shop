@@ -1,4 +1,4 @@
-@media screen and (min-width:1020px) {
+/* @media screen and (min-width:1020px) { */
     .navBar {
         background-color: black;
         color: white;
@@ -764,4 +764,4 @@
         flex-direction: row;
         justify-content: space-around;
     }
-}
+/* } */

@@ -485,9 +485,6 @@ const countOfProducts = document.getElementById("countOfProducts")
 //SELECTING ALL CLASS LIST OF TOP PRODUCTS TITLES.
 let topProductsTitles = document.getElementsByClassName("itemsTitleName");
 
-
-
-
 //Event function for Search icon.
 function search() {
     searchBar.setAttribute("style", "display:block")
@@ -567,7 +564,6 @@ let listOfItemsToDisplay = [13, 14, 2, 8, 9]    //based on id value respective p
 listOfItemsToDisplay.forEach(element => {
     carouselsDataCreation(element);
 });
-
 
 //products in home page,
 
@@ -741,9 +737,6 @@ var typesOfProducts = function (innerElement) {
     addToCart_ImageFunctionalities()
 }
 
-
-
-
 //To open and display product details.
 
 const detailsOfItem = document.getElementById("productDetails")
@@ -758,9 +751,6 @@ const btnInDetails = document.querySelector(".btnInDetails")
 
 const aboutTitles = document.getElementsByClassName("aboutTitles")
 const specifications = document.getElementById("specifications")
-
-// imageDetails.appendChild(headerPartOfDetails)
-// imageDetails.appendChild(pricePartOfDetails)
 
 function representationOfItem(imageFileName) {
     window.scrollTo(0, 0)
@@ -991,7 +981,6 @@ function representationOfItem(imageFileName) {
         }
     }
 
-
     //Add to Cart Funtionalities 
     btnInDetails.addEventListener("click",()=>{
         let imgPath = btnInDetails.closest(".imageDetails").previousSibling.previousSibling.firstChild.getAttribute("src").split("/")
@@ -1080,16 +1069,6 @@ for (let a = 0; a < topProductsTitles.length; a++) {
     }
 }
 
-// for (let i = 0; i < images.length; i++) {
-//     let srcValue = images[i].getAttribute("src").split("/");
-//     let iName = srcValue[srcValue.length - 1]
-//     images[i].addEventListener("click", () => {
-//         console.log(images)
-//         representationOfItem(iName)
-//         // console.log(productsData[1].images)
-//     })
-// }
-
 const carouselsShopButton = document.getElementsByClassName("startShopingbtn")
 carouselsShopButton[0].addEventListener("click", () => {
     representationOfItem("jbl660nc-1.png")
@@ -1132,15 +1111,11 @@ function addToCart_ImageFunctionalities(){
     }
 }
 
-
-
 let browseAllProducts = document.querySelector(".browseAllProducts");
 let clear_Filter_Btn = document.querySelector("#clear_Filter_Btn");
 const filter_Section = document.querySelector("#filter_Section");
 browseAllProducts.addEventListener("click", productsPage)
 clear_Filter_Btn.addEventListener("click", productsPage)
-
-
 
 // Arranging Items based on the Filter selection , Funtion for LOW TO HIGH Price.
 function arrangeLowToHigh() {
