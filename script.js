@@ -845,7 +845,7 @@ function representationOfItem(imageFileName) {
 
             const instock = document.createElement("span");
             instock.innerHTML = `<i class="fa-solid fa-check"></i> &nbsp In Stock`;
-            instock.setAttribute("style", "transform:translate(100px,30px);background-color:green;color:white;height:35px;padding:5px 10px;border-radius:5px")
+            instock.setAttribute("style", "transform:translate(25px,30px);background-color:green;color:white;height:35px;padding:5px 10px;border-radius:5px")
 
             let totalSaveINR = productsData[l].originalPrice - productsData[l].finalPrice;
             let totalSavePercent = Math.ceil(totalSaveINR / productsData[l].originalPrice * 100)
@@ -1381,3 +1381,27 @@ window.addEventListener('scroll', () => {
   iconToTop.addEventListener("click",()=>{
     window.scrollTo(0, 0)
   })
+
+
+  //Applying Media query using JavaScript.
+
+//   function applyStyles() {
+//     // Get the screen width
+//     var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+//     // Check if the screen width is 600px or less
+//     if (screenWidth <= 600) {
+//         document.querySelector(".navBar").style.width = "100%"
+//         document.querySelector(".navBar").style.display = "flex"
+//         document.querySelector(".homePage").style.fontSize = "5px"
+//         document.querySelector(".listOfOptions").style.display = "none"
+//     } else {
+//       // Apply default styles
+//       document.body.style.backgroundColor = 'lightblue';
+//       document.body.style.color = 'black';
+//     }
+//   }
+
+//   // Call the function on page load and window resize
+//   window.addEventListener('load', applyStyles);
+//   window.addEventListener('resize', applyStyles);
