@@ -1094,7 +1094,11 @@ function addToCart_ImageFunctionalities(){
             let imgPath = addToCartBtnOfAllProducts[k].previousSibling.previousSibling.previousSibling.previousSibling.getAttribute("src").split("/")
             let finalAdress = imgPath[imgPath.length-1]
             // console.log(finalAdress)
+            addToCartBtnOfAllProducts[k].style.backgroundColor = "green";
             extractProductDetails(finalAdress)
+            setTimeout(() => {
+                addToCartBtnOfAllProducts[k].style.backgroundColor = "#c10000";
+            }, 3000);
         })
     }
 

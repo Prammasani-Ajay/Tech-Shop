@@ -1542,6 +1542,9 @@
     #userIcon{
         display: none;
     }
+    .userAcc_Icon{
+        display: none;
+    }
     #homePage:hover {
         cursor: pointer;
         color: #d30000;
@@ -1574,11 +1577,10 @@
         background-color: #000000ce;
         overflow: auto;
         height: 7rem;
-        width: 127px;
+        width: 100%;
         text-align: justify;
         /* padding-left: 50px; */
         position: absolute;
-        left: 125px;
         z-index: 2;
         display: none;
     }
@@ -1587,6 +1589,7 @@
         font-size: 14px;
         line-height: 35px;
         color: #9a9a9a;
+        padding: 0px 25px;
     }
 
     #searchElements>div:hover {
@@ -1672,13 +1675,13 @@
         border: 1px solid #ffffff;
     }
 
-    .userAcc_Icon:hover+.userDetails {
-        display: block;
+    /* .userAcc_Icon:hover+.userDetails {
+        display: none;
     }
 
     .userAcc_Icon {
         cursor: pointer;
-    }
+    } */
 
     dialog::backdrop {
         background-color: rgba(0, 0, 0, 0.8);
@@ -2214,7 +2217,7 @@
 
     .counter>button:first-child {
         padding: 1px 7px;
-        font-size: 10px;
+        font-size: 15px;
         font-weight: 650;
         border: none;
         background-color: #c2c2c2;
@@ -2224,14 +2227,14 @@
 
     .counter>span {
         padding: 1px 9px;
-        font-size: 10px;
+        font-size: 15px;
         font-weight: 650;
         color: rgb(231, 0, 0);
     }
 
     .counter>button:last-child {
         padding: 1px 6px;
-        font-size: 10px;
+        font-size: 15px;
         font-weight: 650;
         border: none;
         background-color: #c2c2c2;
@@ -2263,6 +2266,7 @@
 
     #summary_Part {
         height: 25rem;
+        margin:25px 1px;
         padding: 25px;
         display: flex;
         flex-direction: column;
